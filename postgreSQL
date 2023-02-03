@@ -1,0 +1,11 @@
+create table example
+(
+    id varchar,
+    mail varchar,
+    password varchar
+);
+insert into example(id, mail, password)
+values (random id, 'roman@mail', 'random generated'),
+       (random id, 'khaknazar@mail', 'random generated'),
+       (random id, 'erlen@mail', 'random generated'),
+       (random id, 'nurasyl@mail', 'random generated');
