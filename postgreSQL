@@ -4,8 +4,9 @@ create table example
     mail varchar,
     password varchar
 );
+
 insert into example(id, mail, password)
-values (random id, 'roman@mail', 'random generated'),
-       (random id, 'khaknazar@mail', 'random generated'),
-       (random id, 'erlen@mail', 'random generated'),
-       (random id, 'nurasyl@mail', 'random generated');
+values('random id', 'roman@mail', 'random'),
+      ('random id', 'khaknazar@mail', 'random'),
+      ('random id', 'erlen@mail', 'random'),
+      ('random id', 'nurasyl@mail', 'random');
