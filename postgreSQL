@@ -6,7 +6,7 @@ create table example
 );
 
 insert into example(id, mail, password)
-values('random id', 'roman@mail', 'random'),
-      ('random id', 'khaknazar@mail', 'random'),
-      ('random id', 'erlen@mail', 'random'),
-      ('random id', 'nurasyl@mail', 'random');
+values('random id', 'roman@mail', 'random password'),
+      ('random id', 'khaknazar@mail', 'random password'),
+      ('random id', 'erlen@mail', 'random password'),
+      ('random id', 'nurasyl@mail', 'random password');
