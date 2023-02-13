@@ -6,7 +6,7 @@ public class LogIn extends Superclass
         String a = sc.next();
         outMenu.lmn();
         int b = sc.nextInt();
-        for(int i = 0; i < 4; i++)
+        for(int i = 0; i < 10; i++)
         {
             if(a.equals(cm[i].mail) && (b == cm[i].password))
             {
@@ -19,7 +19,7 @@ public class LogIn extends Superclass
     }
     public static void Cabinet(int i)
     {
-        for(int j= 0; j < 4; j++)
+        for(int j= 0; j < 100; j++)
         {
             if(j==i)
             {
