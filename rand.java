@@ -1,4 +1,4 @@
-public abstract class rand extends main
+public abstract class rand extends Superclass
 {
 
     public abstract int rand();
@@ -31,17 +31,54 @@ class randID extends rand
         return (int) (Math.random() * 100000);
     }
 }
-//ниже в комментарри создавались рандомные цены в магазине, но не очень хочется чтобы мебель стоила по цене автомобиля, не так ли?
-/*class randPrice extends rand
-{
-    @Override
-    public int rand()
-    {
-        int a = (int)(Math.random() * 10000000);
-        return a;
+class middleCarPrice {
+    private int balance;
+    public middleCarPrice() { balance = randCarPrice.rCrP.rand(); }
+    public void getBalance() {
+        System.out.println("Middle cost of our cars: " + balance);
     }
-}*/
-//поэтому ниже создан абстрактный класс рандомных цен
+}
+class middleClosePrice {
+    private int balance;
+    public middleClosePrice() { balance = randClosesPrice.rClP.rand(); }
+    public void getBalance() {
+        System.out.println("Middle cost of closes: " + balance);
+    }
+}
+class middleCarPriceAdapter extends middleCarPrice {
+    private middleClosePrice abank;
+    public middleCarPriceAdapter(middleClosePrice abank) {
+        this.abank = abank;
+    }
+    public void getBalance() {
+        abank.getBalance();
+    }
+}
+//
+class middleHomePrice {
+    private int balance;
+    public middleHomePrice() { balance = randHomePrice.rHP.rand(); }
+    public void getBalanc() {
+        System.out.println("Furniture cost commonly: " + balance);
+    }
+}
+class middleElectronicPrice {
+    private int balance;
+    public middleElectronicPrice() { balance = randElectronicsPrice.rEP.rand(); }
+    public void getBalanc() {
+        System.out.println("You can find electronics by the middle price: " + balance);
+    }
+}
+class PBankAdapter extends middleHomePrice {
+    private middleElectronicPrice meprice;
+    public PBankAdapter(middleElectronicPrice meprice) {
+        this.meprice = meprice;
+    }
+    public void getBalanc() {
+        meprice.getBalanc();
+    }
+}
+//
 abstract class randPrice extends rand
 {
     public abstract int rand();
