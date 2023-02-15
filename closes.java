@@ -1,11 +1,11 @@
-abstract class closesAbstract extends main//шаблон для класса
+abstract class closesAbstract extends Superclass
 {
     public abstract String jacketInf();
     public abstract String tShirtInf();
     public abstract String sneakersInf();
 }
 
-public final class closes extends closesAbstract//класс категории
+public final class closes extends closesAbstract
 {
     public static String jacket = "Italian jacket";
     public static String tShirt = "White T- shirt";
@@ -74,7 +74,7 @@ public final class closes extends closesAbstract//класс категории
             }
             else if (va.equals("exit") || va.equals("Exit"))
             {
-                Cabinet(user);
+                LogIn.Cabinet(user);
                 break;
             }
             else
