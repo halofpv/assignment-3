@@ -7,10 +7,7 @@ public class Superclass
     {
         DataBase.dataBase();
         ArrayList<String> list = new ArrayList<String>();
-        System.out.println();
-        System.out.println("Time: " + Clock.getTime());
 
-        outMenu.hi();
         int Num = sc.nextInt();
         for(int userNum = 0; userNum < Num; userNum++)
         {
@@ -18,7 +15,6 @@ public class Superclass
             cm[userNum] = new consumer(rID.rand(), name, getLow(name) + "@mail", rPss.rand(), rM.rand());
             list.add(cm[userNum].getter());
         }
-        outMenu.list();
         System.out.println(list);
         LogIn.logIn();
     }
@@ -26,6 +22,8 @@ public class Superclass
     {
         return n.toLowerCase();
     }
+    static Singleton singelton = Singleton.getInstance();
+
     static consumer[] cm = new consumer[10];
     static Scanner sc = new Scanner(System.in);
     static randPassword rPss = new randPassword();
