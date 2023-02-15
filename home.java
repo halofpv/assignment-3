@@ -1,4 +1,4 @@
-abstract class homeAbstract extends main
+abstract class homeAbstract extends Superclass
 {
     public abstract String bedInf();
     public abstract String WardrobeInf();
@@ -14,26 +14,26 @@ public final class home extends homeAbstract
     public static double wardrobePrice = rHP.rand();
     public static double bedPrice = rHP.rand();
 
-        @Override
-        public String KitchenInf()
-        {
-            String uwq = kitchen + " kitchen only. price: " + kitchenPrice;
-            return uwq;
-        }
+    @Override
+    public String KitchenInf()
+    {
+        String uwq = kitchen + " kitchen only. price: " + kitchenPrice;
+        return uwq;
+    }
 
-        @Override
-        public String WardrobeInf()
-        {
-            String uwq = wardrobe + " wardrobe only. price: " + wardrobePrice;
-            return uwq;
-        }
+    @Override
+    public String WardrobeInf()
+    {
+        String uwq = wardrobe + " wardrobe only. price: " + wardrobePrice;
+        return uwq;
+    }
 
-        @Override
-        public String bedInf()
-        {
-            String uwq = bed + " bed. price: " + bedPrice;
-            return uwq;
-        }
+    @Override
+    public String bedInf()
+    {
+        String uwq = bed + " bed. price: " + bedPrice;
+        return uwq;
+    }
 
     public void Home(int user)
     {
@@ -75,7 +75,7 @@ public final class home extends homeAbstract
             }
             else if (va.equals("exit") || va.equals("Exit"))
             {
-                Cabinet(user);
+                LogIn.Cabinet(user);
                 break;
             }
             else
@@ -87,3 +87,6 @@ public final class home extends homeAbstract
         }
     }
 }
+
+
+
