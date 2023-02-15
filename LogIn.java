@@ -19,6 +19,17 @@ public class LogIn extends Superclass
     }
     public static void Cabinet(int i)
     {
+        System.out.println("Time: " + Clock.getTime());
+        singelton.setUp();
+        middleCarPrice pbank = new middleCarPrice();
+        pbank.getBalance();
+        middleCarPriceAdapter abank = new middleCarPriceAdapter(new middleClosePrice());
+        abank.getBalance();
+
+        middleHomePrice mhprice = new middleHomePrice();
+        mhprice.getBalanc();
+        PBankAdapter meprice = new PBankAdapter(new middleElectronicPrice());
+        meprice.getBalanc();
         for(int j= 0; j < 100; j++)
         {
             if(j==i)
