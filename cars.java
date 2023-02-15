@@ -1,4 +1,4 @@
-abstract class carAbstract extends main
+abstract class carAbstract extends Superclass
 {
     public abstract String hondaInf();
     public abstract String ladaInf();
@@ -7,6 +7,7 @@ abstract class carAbstract extends main
 
 public class cars extends carAbstract
 {
+    //меню cars
     public static String honda = "Honda CR-Z";
     public static String lada = "Lada Priora";
     public static String ford = "Ford Fiesta";
@@ -75,7 +76,7 @@ public class cars extends carAbstract
             }
             else if (va.equals("exit") || va.equals("Exit"))
             {
-                Cabinet(user);
+                LogIn.Cabinet(user);
                 break;
             }
             else
