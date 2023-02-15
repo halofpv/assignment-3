@@ -19,8 +19,4 @@ public interface out
     {
         System.out.println("Find your car below: ");
     }
-    static void errorM()
-    {
-        System.out.println("Transaction error(30:03): not enough money");
-    }
 }
