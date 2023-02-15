@@ -1,11 +1,11 @@
-abstract class electronicsAbstract extends main//шаблон для класса
+abstract class electronicsAbstract extends Superclass//шаблон для класса
 {
     public abstract String wireInf();
     public abstract String microshemeInf();
     public abstract String batteryInf();
 }
 
-public final class electronics extends electronicsAbstract//класс категории
+public final class electronics extends electronicsAbstract
 {
     public static String wire = "Fat wire";
     public static String microsheme = "Video board";
@@ -14,7 +14,7 @@ public final class electronics extends electronicsAbstract//класс кате�
     public static double microshemePrice = rEP.rand();
     public static double batteryPrice = rEP.rand();
 
-    @Override
+
     public String wireInf()
     {
         String uwq = wire + ": " + wirePrice;
@@ -75,7 +75,7 @@ public final class electronics extends electronicsAbstract//класс кате�
             }
             else if (va.equals("exit") || va.equals("Exit"))
             {
-                Cabinet(user);
+                LogIn.Cabinet(user);
                 break;
             }
             else
