@@ -1,21 +1,25 @@
+import java.sql.SQLException;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Superclass
 {
-    public static void main(String[] args)
-    {
-        DataBase.dataBase();
+    public static void main(String[] args) throws SQLException {
+
         ArrayList<String> list = new ArrayList<String>();
 
         int Num = sc.nextInt();
         for(int userNum = 0; userNum < Num; userNum++)
         {
             String name = sc.next();
+            Cllient c1 = new Cllient();
+            c1.changeinfo(name);
             cm[userNum] = new consumer(rID.rand(), name, getLow(name) + "@mail", rPss.rand(), rM.rand());
             list.add(cm[userNum].getter());
         }
         System.out.println(list);
+        for(int i = 0; i < Num; i++)
+        DataBase.dataBase();
         LogIn.logIn();
     }
     private static String getLow(String n)
