@@ -1,0 +1,6 @@
+create table example
+(
+    id varchar,
+    mail varchar,
+    password varchar
+);
