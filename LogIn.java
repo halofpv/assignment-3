@@ -1,9 +1,17 @@
+import java.sql.SQLException;
+
 public class LogIn extends Superclass
 {
+
     public static void logIn()
     {
         outMenu.lm();
         String a = sc.next();
+        if(a.equals("Exit")||a.equals("exit"))
+        {
+        System.out.println("Stopped");
+        return;
+        }
         outMenu.lmn();
         int b = sc.nextInt();
         for(int i = 0; i < 10; i++)
@@ -14,11 +22,13 @@ public class LogIn extends Superclass
                 Cabinet(i);
             }
         }
+
         outMenu.error();
         logIn();
     }
     public static void Cabinet(int i)
     {
+
         System.out.println("Time: " + Clock.getTime());
         singelton.setUp();
         middleCarPrice pbank = new middleCarPrice();
