@@ -4,22 +4,33 @@ import java.util.ArrayList;
 
 public class Superclass
 {
+    static int Num;
     public static void main(String[] args) throws SQLException {
 
         ArrayList<String> list = new ArrayList<String>();
 
-        int Num = sc.nextInt();
+         Num = sc.nextInt();
         for(int userNum = 0; userNum < Num; userNum++)
         {
             String name = sc.next();
             Cllient c1 = new Cllient();
-            c1.changeinfo(name);
             cm[userNum] = new consumer(rID.rand(), name, getLow(name) + "@mail", rPss.rand(), rM.rand());
+            c1.changeinfo(cm[userNum].ID, name, cm[userNum].password);
+            System.out.println("Do you want to change your data?");
+            String fdswe = sc.next();
+            if(fdswe.equals("Yes")||fdswe.equals("yes"))
+            {
+                System.out.println("Input new id, name and password: ");
+                cm[userNum].ID = sc.nextInt();
+                cm[userNum].name = sc.next();
+                cm[userNum].password = sc.nextInt();
+                DataBase.updateuser(cm[userNum].ID, cm[userNum].name, cm[userNum].password, userNum);
+            }
             list.add(cm[userNum].getter());
+            DataBase.dataBase();
+            DataBase.deleteuser(cm[userNum].ID, name, cm[userNum].password);
         }
         System.out.println(list);
-        for(int i = 0; i < Num; i++)
-        DataBase.dataBase();
         LogIn.logIn();
     }
     private static String getLow(String n)
@@ -27,7 +38,6 @@ public class Superclass
         return n.toLowerCase();
     }
     static Singleton singelton = Singleton.getInstance();
-
     static consumer[] cm = new consumer[10];
     static Scanner sc = new Scanner(System.in);
     static randPassword rPss = new randPassword();
